@@ -23,16 +23,16 @@
 
 <script>
     function goScript(){
-        var input = getValue();
-        if(isValid(input, "10Y08F19")){
+        var input = getValue().toUpperCase();
+        if(isValid(input)){
             document.location.assign("./html/main.html");
         }else{
             alert("Wrong password !")
         }
     }
 
-    function isValid(input, pswd){
-        return input == pswd;
+    function isValid(input){
+        return input == "10Y08F19" || input == "10F08Y19";
     }
 
     function getValue() { 
