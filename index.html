@@ -10,16 +10,24 @@
 <body>
     
     <center>
-        <h1>Entrer le mot de passe</h1>
-        <input id="pwd" type="password" placeholder="Password">
+        <h1>PASSWORD</h1>
+        <input id="pwd" type="password" placeholder="Entrez votre mot de passe">
 
         <div class="ValidBox">
             <h2>Valider</h2>
              <img src="./images/goToMain.jpg" onclick="goScript()" alt="goToMain.jpg">
         </div>
+
+        <h3 id="hintButton" onclick="printHint()">INDICE</h3>
+        <p id="hint">
+            INDICE : 3 Nombre et 2 Lettre.
+            <br><br>
+            EXEMPLE : 12A34B56.
+        </p>
     </center>
 </body>
 
+<!-- ---------------------------------------------------------------------------------------- SCRIPT ---------------------------------------------------------------------------------------- -->
 
 <script>
     function goScript(){
@@ -27,7 +35,8 @@
         if(isValid(input)){
             document.location.assign("./html/main.html");
         }else{
-            alert("Wrong password !")
+            alert("Ce n'est pas ça ! Tu peux avoir un indice plus bas...");
+            printHintButton();
         }
     }
 
@@ -35,8 +44,24 @@
         return input == "10Y08F19" || input == "10F08Y19";
     }
 
-    function getValue() { 
+    function getValue(){ 
         return document.getElementById("pwd").value;
+    }
+
+    function printHintButton(){
+        let hintButton = document.getElementById("hintButton");
+        if(getComputedStyle(hintButton).display == "none"){
+            hintButton.style.display = "block";
+       }
+    }
+
+    function printHint(){
+        let hint = document.getElementById("hint");
+        if(getComputedStyle(hint).display == "none"){
+            hint.style.display = "block";
+        }else{
+            hint.style.display = "none";
+        }
     }
 </script>
 

@@ -6,6 +6,7 @@ body {
     padding:0;
     background-size: 100%;
     width:100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
   
 body:before {
@@ -29,9 +30,24 @@ h1{
     border-color: violet;
   }
 
-  h2{
-    color: lightpink;
-  }
+h2{
+  color: lightpink;
+}
+
+h3{
+  color: violet;
+  border-radius: 50px;
+  width: 130px;
+  background-color: purple;
+}
+
+p{
+  color: white;
+}
+
+#hint,#hintButton{
+  display: none;
+}
 
 input{
     width: 250px;
@@ -42,12 +58,13 @@ input{
 
     background-color: violet;
     color: purple;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 img{
     border-radius: 100%;
+    margin-bottom: 25px;
   }
 
 
@@ -61,6 +78,6 @@ img{
     }
 
     img{
-        width: 50%;
+        width: 40%;
     }
 }

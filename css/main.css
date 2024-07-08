@@ -6,6 +6,7 @@ body {
     padding:0;
     background-size: 100%;
     width:100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
   
 body:before {
@@ -29,6 +30,9 @@ h1{
   border-color: violet;
 }
 
+span{
+  color: rgb(192, 0, 192);
+}
 
 p{
   text-align:center;
